@@ -1,99 +1,93 @@
+import 'dart:convert';
+
+engage_customer_model welcomeFromJson(String str) => engage_customer_model.fromJson(json.decode(str));
+
+String welcomeToJson(engage_customer_model data) => json.encode(data.toJson());
+
 class engage_customer_model {
-  List<Data> data;
-  String message;
+  engage_customer_model({
+    this.success,
+    this.message,
+    this.data,
+  });
+
   bool success;
+  String message;
+  List<Datum> data;
 
-  engage_customer_model({this.data, this.message, this.success});
+  factory engage_customer_model.fromJson(Map<String, dynamic> json) => engage_customer_model(
+    success: json["success"] == null ? null : json["success"],
+    message: json["message"] == null ? null : json["message"],
+    data: json["data"] == null ? null : List<Datum>.from(json["data"].map((x) => Datum.fromJson(x))),
+  );
 
-  factory engage_customer_model.fromJson(Map<String, dynamic> json) {
-    return engage_customer_model(
-      data: json['`data`'] != null
-          ? (json['`data`'] as List).map((i) => Data.fromJson(i)).toList()
-          : null,
-      message: json['message'],
-      success: json['success'],
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['message'] = this.message;
-    data['success'] = this.success;
-    if (this.data != null) {
-      data['`data`'] = this.data.map((v) => v.toJson()).toList();
-    }
-    return data;
-  }
+  Map<String, dynamic> toJson() => {
+    "success": success == null ? null : success,
+    "message": message == null ? null : message,
+    "data": data == null ? null : List<dynamic>.from(data.map((x) => x.toJson())),
+  };
 }
 
-class Data {
-  int count;
-  int engage_customer_shorted_list;
-  FilterData filter_data;
-  String id;
-  String image_url;
+class Datum {
+  Datum({
+    this.name,
+    this.imageUrl,
+    this.type,
+    this.engageCustomerShortedList,
+    this.filterData,
+    this.count,
+    this.id,
+  });
+
   String name;
+  String imageUrl;
   String type;
+  int engageCustomerShortedList;
+  FilterData filterData;
+  int count;
+  dynamic id;
 
-  Data(
-      {this.count,
-      this.engage_customer_shorted_list,
-      this.filter_data,
-      this.id,
-      this.image_url,
-      this.name,
-      this.type});
+  factory Datum.fromJson(Map<String, dynamic> json) => Datum(
+    name: json["name"] == null ? null : json["name"],
+    imageUrl: json["image_url"] == null ? null : json["image_url"],
+    type: json["type"] == null ? null : json["type"],
+    engageCustomerShortedList: json["engage_customer_shorted_list"] == null ? null : json["engage_customer_shorted_list"],
+    filterData: json["filter_data"] == null ? null : FilterData.fromJson(json["filter_data"]),
+    count: json["count"] == null ? null : json["count"],
+    id: json["id"],
+  );
 
-  factory Data.fromJson(Map<String, dynamic> json) {
-    return Data(
-      count: json['count'],
-      engage_customer_shorted_list: json['engage_customer_shorted_list'],
-      filter_data: json['filter_data'] != null
-          ? FilterData.fromJson(json['filter_data'])
-          : null,
-      id: json['id'] != null ? json['id'] : null,
-      image_url: json['image_url'],
-      name: json['name'],
-      type: json['type'],
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['count'] = this.count;
-    data['engage_customer_shorted_list'] = this.engage_customer_shorted_list;
-    data['image_url'] = this.image_url;
-    data['name'] = this.name;
-    data['type'] = this.type;
-    data['id'] = this.id;
-    if (this.filter_data != null) {
-      data['filter_data'] = this.filter_data.toJson();
-    }
-    return data;
-  }
+  Map<String, dynamic> toJson() => {
+    "name": name == null ? null : name,
+    "image_url": imageUrl == null ? null : imageUrl,
+    "type": type == null ? null : type,
+    "engage_customer_shorted_list": engageCustomerShortedList == null ? null : engageCustomerShortedList,
+    "filter_data": filterData == null ? null : filterData.toJson(),
+    "count": count == null ? null : count,
+    "id": id,
+  };
 }
 
 class FilterData {
-  String filter_type;
-  String last_visit_from_date;
-  String last_visit_to_date;
+  FilterData({
+    this.filterType,
+    this.lastVisitFromDate,
+    this.lastVisitToDate,
+  });
 
-  FilterData(
-      {this.filter_type, this.last_visit_from_date, this.last_visit_to_date});
+  String filterType;
+  DateTime lastVisitFromDate;
+  DateTime lastVisitToDate;
 
-  factory FilterData.fromJson(Map<String, dynamic> json) {
-    return FilterData(
-      filter_type: json['filter_type'],
-      last_visit_from_date: json['last_visit_from_date'],
-      last_visit_to_date: json['last_visit_to_date'],
-    );
-  }
+  factory FilterData.fromJson(Map<String, dynamic> json) => FilterData(
+    filterType: json["filter_type"] == null ? null : json["filter_type"],
+    lastVisitFromDate: json["last_visit_from_date"] == null ? null : DateTime.parse(json["last_visit_from_date"]),
+    lastVisitToDate: json["last_visit_to_date"] == null ? null : DateTime.parse(json["last_visit_to_date"]),
+  );
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['filter_type'] = this.filter_type;
-    data['last_visit_from_date'] = this.last_visit_from_date;
-    data['last_visit_to_date'] = this.last_visit_to_date;
-    return data;
-  }
+  Map<String, dynamic> toJson() => {
+    "filter_type": filterType == null ? null : filterType,
+    "last_visit_from_date": lastVisitFromDate == null ? null : lastVisitFromDate.toIso8601String(),
+    "last_visit_to_date": lastVisitToDate == null ? null : lastVisitToDate.toIso8601String(),
+  };
 }

@@ -104,6 +104,9 @@ dependencies:
   dio: ^3.0.9
   get_test: ^3.13.2
   http: 0.12.2
+  cached_network_image: ^2.0.0
+
+
 
 dependency_overrides:
   get:
@@ -112,16 +115,29 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter.
 flutter:
-
+  assets:
+    - assets/images/loginlogo.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  fonts:
+    - family: helvetica
+      fonts:
+        - asset: assets/fonts/helvetica_bold.ttf
+          weight: 100
+        - asset: assets/fonts/helvetica_bold_oblique.ttf
+          weight: 200
+        - asset: assets/fonts/helvetica_normal.ttf
+          weight: 300
+        - asset: assets/fonts/helvetica_oblique.ttf
+          weight: 400
 
   # To add assets to your application, add an assets section, like this:
   # assets:

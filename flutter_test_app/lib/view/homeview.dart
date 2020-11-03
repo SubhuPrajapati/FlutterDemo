@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test_app/common/CommonColor.dart';
@@ -19,8 +20,16 @@ class _MyHomeViewState extends State<MyHomeView> {
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
+          iconTheme: IconThemeData(
+            color: CommonColor.color[100], //change your color here
+          ),
+          backgroundColor: Colors.white,
           title: Text(
             'Dashboard',
+            style: TextStyle(
+                color: Colors.black,
+                fontFamily: 'helvetica',
+                fontWeight: FontWeight.w700),
           ),
         ),
         body: SingleChildScrollView(
@@ -38,8 +47,8 @@ class _MyHomeViewState extends State<MyHomeView> {
                             child: Text(
                               'DashBoard',
                               style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
+                                  fontFamily: 'helvetica',
+                                  fontWeight: FontWeight.w700),
                             ),
                           ),
                           Container(
@@ -47,8 +56,8 @@ class _MyHomeViewState extends State<MyHomeView> {
                             child: Text(
                               'Redeem Coupon',
                               style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
+                                  fontFamily: 'helvetica',
+                                  fontWeight: FontWeight.w700),
                             ),
                           ),
                         ],
@@ -77,7 +86,8 @@ class _MyHomeViewState extends State<MyHomeView> {
                                     child: Text(
                                       'Offtake Points',
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'helvetica',
+                                          fontWeight: FontWeight.w700,
                                           color: Colors.white,
                                           fontSize: 14),
                                     ),
@@ -87,7 +97,10 @@ class _MyHomeViewState extends State<MyHomeView> {
                                     child: Text(
                                       'FY 2020-21',
                                       style: TextStyle(
-                                          fontSize: 10, color: Colors.white),
+                                          fontSize: 10,
+                                          color: Colors.white,
+                                          fontFamily: 'helvetica',
+                                          fontWeight: FontWeight.w400),
                                     ),
                                   ),
                                 ],
@@ -95,7 +108,7 @@ class _MyHomeViewState extends State<MyHomeView> {
                             ),
                             SizedBox(height: 10),
                             Container(
-                                margin: EdgeInsets.fromLTRB(14, 10, 14, 10),
+                                margin: EdgeInsets.fromLTRB(14, 0, 14, 10),
                                 child: IntrinsicHeight(
                                   child: Row(
                                     children: [
@@ -110,7 +123,8 @@ class _MyHomeViewState extends State<MyHomeView> {
                                               style: TextStyle(
                                                   fontSize: 10,
                                                   color: Colors.white,
-                                                  fontWeight: FontWeight.bold),
+                                                  fontFamily: 'helvetica',
+                                                  fontWeight: FontWeight.w700),
                                             ),
                                           ),
                                           SizedBox(height: 3),
@@ -126,8 +140,9 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.white,
+                                                        fontFamily: 'helvetica',
                                                         fontWeight:
-                                                            FontWeight.bold),
+                                                            FontWeight.w700),
                                                   )
                                                 : Text(
                                                     homeController
@@ -139,8 +154,9 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.white,
+                                                        fontFamily: 'helvetica',
                                                         fontWeight:
-                                                            FontWeight.bold),
+                                                        FontWeight.w700),
                                                   ),
                                           ),
                                         ],
@@ -157,7 +173,8 @@ class _MyHomeViewState extends State<MyHomeView> {
                                               style: TextStyle(
                                                   fontSize: 10,
                                                   color: Colors.white,
-                                                  fontWeight: FontWeight.bold),
+                                                  fontFamily: 'helvetica',
+                                                  fontWeight: FontWeight.w700),
                                             ),
                                           ),
                                           SizedBox(height: 3),
@@ -171,8 +188,9 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.white,
+                                                        fontFamily: 'helvetica',
                                                         fontWeight:
-                                                            FontWeight.bold),
+                                                            FontWeight.w700),
                                                   )
                                                 : Text(
                                                     homeController
@@ -184,8 +202,9 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.white,
+                                                        fontFamily: 'helvetica',
                                                         fontWeight:
-                                                            FontWeight.bold),
+                                                            FontWeight.w700),
                                                   ),
                                           ),
                                         ],
@@ -205,7 +224,8 @@ class _MyHomeViewState extends State<MyHomeView> {
                                               style: TextStyle(
                                                   fontSize: 10,
                                                   color: Colors.white,
-                                                  fontWeight: FontWeight.bold),
+                                                  fontFamily: 'helvetica',
+                                                  fontWeight: FontWeight.w700),
                                             ),
                                           ),
                                           SizedBox(height: 3),
@@ -221,8 +241,9 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.white,
+                                                        fontFamily: 'helvetica',
                                                         fontWeight:
-                                                            FontWeight.bold),
+                                                            FontWeight.w700),
                                                   )
                                                 : Text(
                                                     homeController
@@ -234,8 +255,9 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.white,
+                                                        fontFamily: 'helvetica',
                                                         fontWeight:
-                                                            FontWeight.bold),
+                                                            FontWeight.w700),
                                                   ),
                                           ),
                                         ],
@@ -252,7 +274,8 @@ class _MyHomeViewState extends State<MyHomeView> {
                                               style: TextStyle(
                                                   fontSize: 10,
                                                   color: Colors.white,
-                                                  fontWeight: FontWeight.bold),
+                                                  fontFamily: 'helvetica',
+                                                  fontWeight: FontWeight.w700),
                                             ),
                                           ),
                                           SizedBox(height: 3),
@@ -268,8 +291,9 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.white,
+                                                        fontFamily: 'helvetica',
                                                         fontWeight:
-                                                            FontWeight.bold),
+                                                            FontWeight.w700),
                                                   )
                                                 : Text(
                                                     homeController
@@ -281,8 +305,9 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.white,
+                                                        fontFamily: 'helvetica',
                                                         fontWeight:
-                                                            FontWeight.bold),
+                                                            FontWeight.w700),
                                                   ),
                                           ),
                                         ],
@@ -317,7 +342,8 @@ class _MyHomeViewState extends State<MyHomeView> {
                                     child: Text(
                                       'Warranty Points',
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'helvetica',
+                                          fontWeight: FontWeight.w700,
                                           color: Colors.white,
                                           fontSize: 14),
                                     ),
@@ -327,7 +353,10 @@ class _MyHomeViewState extends State<MyHomeView> {
                                     child: Text(
                                       'Apr’19 to Till Now',
                                       style: TextStyle(
-                                          fontSize: 10, color: Colors.white),
+                                          fontSize: 10,
+                                          color: Colors.white,
+                                          fontFamily: 'helvetica',
+                                          fontWeight: FontWeight.w400),
                                     ),
                                   ),
                                 ],
@@ -335,7 +364,7 @@ class _MyHomeViewState extends State<MyHomeView> {
                             ),
                             SizedBox(height: 10),
                             Container(
-                                margin: EdgeInsets.fromLTRB(14, 10, 14, 10),
+                                margin: EdgeInsets.fromLTRB(14, 0, 14, 10),
                                 child: IntrinsicHeight(
                                   child: Row(
                                     children: [
@@ -350,7 +379,8 @@ class _MyHomeViewState extends State<MyHomeView> {
                                               style: TextStyle(
                                                   fontSize: 10,
                                                   color: Colors.white,
-                                                  fontWeight: FontWeight.bold),
+                                                  fontFamily: 'helvetica',
+                                                  fontWeight: FontWeight.w700),
                                             ),
                                           ),
                                           SizedBox(height: 3),
@@ -366,8 +396,9 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.white,
+                                                        fontFamily: 'helvetica',
                                                         fontWeight:
-                                                            FontWeight.bold),
+                                                            FontWeight.w700),
                                                   )
                                                 : Text(
                                                     homeController
@@ -380,8 +411,9 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.white,
+                                                        fontFamily: 'helvetica',
                                                         fontWeight:
-                                                            FontWeight.bold),
+                                                            FontWeight.w700),
                                                   ),
                                           ),
                                         ],
@@ -398,7 +430,8 @@ class _MyHomeViewState extends State<MyHomeView> {
                                               style: TextStyle(
                                                   fontSize: 10,
                                                   color: Colors.white,
-                                                  fontWeight: FontWeight.bold),
+                                                  fontFamily: 'helvetica',
+                                                  fontWeight: FontWeight.w700),
                                             ),
                                           ),
                                           SizedBox(height: 3),
@@ -414,8 +447,9 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.white,
+                                                        fontFamily: 'helvetica',
                                                         fontWeight:
-                                                            FontWeight.bold),
+                                                            FontWeight.w700),
                                                   )
                                                 : Text(
                                                     homeController
@@ -428,8 +462,9 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.white,
+                                                        fontFamily: 'helvetica',
                                                         fontWeight:
-                                                            FontWeight.bold),
+                                                            FontWeight.w700),
                                                   ),
                                           ),
                                         ],
@@ -449,7 +484,8 @@ class _MyHomeViewState extends State<MyHomeView> {
                                               style: TextStyle(
                                                   fontSize: 10,
                                                   color: Colors.white,
-                                                  fontWeight: FontWeight.bold),
+                                                  fontFamily: 'helvetica',
+                                                  fontWeight: FontWeight.w700),
                                             ),
                                           ),
                                           SizedBox(height: 3),
@@ -465,8 +501,9 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.white,
+                                                        fontFamily: 'helvetica',
                                                         fontWeight:
-                                                            FontWeight.bold),
+                                                            FontWeight.w700),
                                                   )
                                                 : Text(
                                                     homeController
@@ -479,8 +516,9 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.white,
+                                                        fontFamily: 'helvetica',
                                                         fontWeight:
-                                                            FontWeight.bold),
+                                                            FontWeight.w700),
                                                   ),
                                           ),
                                         ],
@@ -497,7 +535,8 @@ class _MyHomeViewState extends State<MyHomeView> {
                                               style: TextStyle(
                                                   fontSize: 10,
                                                   color: Colors.white,
-                                                  fontWeight: FontWeight.bold),
+                                                  fontFamily: 'helvetica',
+                                                  fontWeight: FontWeight.w700),
                                             ),
                                           ),
                                           SizedBox(height: 3),
@@ -513,8 +552,9 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.white,
+                                                        fontFamily: 'helvetica',
                                                         fontWeight:
-                                                            FontWeight.bold),
+                                                            FontWeight.w700),
                                                   )
                                                 : Text(
                                                     homeController
@@ -527,8 +567,9 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                     style: TextStyle(
                                                         fontSize: 14,
                                                         color: Colors.white,
+                                                        fontFamily: 'helvetica',
                                                         fontWeight:
-                                                            FontWeight.bold),
+                                                            FontWeight.w700),
                                                   ),
                                           ),
                                         ],
@@ -558,7 +599,8 @@ class _MyHomeViewState extends State<MyHomeView> {
                                 child: Text(
                                   "Grow Your Business (Run a campaign)",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'helvetica',
+                                      fontWeight: FontWeight.w700,
                                       fontSize: 14),
                                 ),
                               ),
@@ -566,7 +608,7 @@ class _MyHomeViewState extends State<MyHomeView> {
                               homeController.growMore.value.data == null
                                   ? Container()
                                   : Container(
-                                      height: 70,
+                                      height: 90,
                                       child: Expanded(
                                         child: ListView.builder(
                                             scrollDirection: Axis.horizontal,
@@ -574,27 +616,69 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                 .growMore.value.data.length,
                                             itemBuilder: (context, index) {
                                               return Container(
-                                                height: 90,
-                                                width: 90,
+                                                margin:
+                                                    const EdgeInsets.fromLTRB(
+                                                        5, 0, 0, 0),
+                                                decoration: BoxDecoration(
+                                                    color:
+                                                        CommonColor.color[200],
+                                                    shape: BoxShape.rectangle,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10)),
+                                                height: 80,
+                                                width: 85,
                                                 child: Column(
                                                   children: [
-                                                    Container(
-
-                                                      width: 30,
-                                                      height: 30,
-                                                      color: Colors.yellow,
-                                                      child: Image.network(
-                                                        homeController
-                                                            .growMore
-                                                            .value
-                                                            .data[index]
-                                                            .imageUrl
-                                                            .toString(),
+                                                    Center(
+                                                      child: Column(
+                                                        children: [
+                                                          SizedBox(
+                                                            height: 20,
+                                                          ),
+                                                          Container(
+                                                            width: 30,
+                                                            height: 30,
+                                                            child:
+                                                                CachedNetworkImage(
+                                                              imageUrl:
+                                                                  homeController
+                                                                      .growMore
+                                                                      .value
+                                                                      .data[
+                                                                          index]
+                                                                      .imageUrl
+                                                                      .toString(),
+                                                            ),
+                                                          ),
+                                                          SizedBox(
+                                                            height: 5,
+                                                          ),
+                                                          Align(
+                                                            alignment: Alignment
+                                                                .center,
+                                                            child: Text(
+                                                              homeController
+                                                                  .growMore
+                                                                  .value
+                                                                  .data[index]
+                                                                  .name
+                                                                  .toString(),
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .center,
+                                                              style: TextStyle(
+                                                                  fontSize: 12,
+                                                                  fontFamily:
+                                                                      'helvetica',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400),
+                                                            ),
+                                                          )
+                                                        ],
                                                       ),
-                                                    ),
-                                                    Text(homeController.growMore
-                                                        .value.data[index].name
-                                                        .toString())
+                                                    )
                                                   ],
                                                 ),
                                               );
@@ -606,36 +690,101 @@ class _MyHomeViewState extends State<MyHomeView> {
                                 child: Text(
                                   "Engage Your Customers (Run a campaign)",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'helvetica',
+                                      fontWeight: FontWeight.w700,
                                       fontSize: 14),
                                 ),
                               ),
                               SizedBox(height: 10),
-                              Container(
-                                  height: 100,
-                                  child: Expanded(
-                                    child: ListView.builder(
-                                      scrollDirection: Axis.horizontal,
-                                      itemCount: 4,
-                                      itemBuilder: (context, index) {
-                                        return Container(
-                                          child: Text(
-                                            "${index}",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 14),
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  )),
+                              homeController.enagageCustomerModel.value.data ==
+                                      null
+                                  ? Container()
+                                  : Container(
+                                      height: 90,
+                                      child: Expanded(
+                                        child: ListView.builder(
+                                            scrollDirection: Axis.horizontal,
+                                            itemCount: homeController
+                                                .enagageCustomerModel
+                                                .value
+                                                .data
+                                                .length,
+                                            itemBuilder: (context, index) {
+                                              return Container(
+                                                margin:
+                                                    const EdgeInsets.fromLTRB(
+                                                        5, 0, 0, 0),
+                                                decoration: BoxDecoration(
+                                                    color:
+                                                        CommonColor.color[200],
+                                                    shape: BoxShape.rectangle,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10)),
+                                                height: 80,
+                                                width: 85,
+                                                child: Column(
+                                                  children: [
+                                                    Center(
+                                                      child: Column(
+                                                        children: [
+                                                          SizedBox(
+                                                            height: 20,
+                                                          ),
+                                                          Container(
+                                                            width: 30,
+                                                            height: 30,
+                                                            child:
+                                                                CachedNetworkImage(
+                                                              imageUrl: homeController
+                                                                  .enagageCustomerModel
+                                                                  .value
+                                                                  .data[index]
+                                                                  .imageUrl
+                                                                  .toString(),
+                                                            ),
+                                                          ),
+                                                          SizedBox(
+                                                            height: 5,
+                                                          ),
+                                                          Align(
+                                                            alignment: Alignment
+                                                                .center,
+                                                            child: Text(
+                                                              homeController
+                                                                  .enagageCustomerModel
+                                                                  .value
+                                                                  .data[index]
+                                                                  .name
+                                                                  .toString(),
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .center,
+                                                              style: TextStyle(
+                                                                  fontSize: 12,
+                                                                  fontFamily:
+                                                                      'helvetica',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400),
+                                                            ),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              );
+                                            }),
+                                      )),
                               SizedBox(height: 10),
                               Container(
                                 margin: EdgeInsets.fromLTRB(10, 15, 10, 10),
                                 child: Text(
                                   "Balance SMS Credits : 0",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'helvetica',
+                                      fontWeight: FontWeight.w700,
                                       fontSize: 14),
                                 ),
                               ),
@@ -661,7 +810,8 @@ class _MyHomeViewState extends State<MyHomeView> {
                                 child: Text(
                                   "PCR Scheme",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'helvetica',
+                                      fontWeight: FontWeight.w700,
                                       fontSize: 14),
                                 ),
                               ),
@@ -675,14 +825,18 @@ class _MyHomeViewState extends State<MyHomeView> {
                                     children: [
                                       Text(
                                         "Target",
-                                        style: TextStyle(fontSize: 12),
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontFamily: 'helvetica',
+                                            fontWeight: FontWeight.w400),
                                       ),
                                       SizedBox(height: 5),
                                       Text(
                                         "0",
                                         style: TextStyle(
                                             fontSize: 12,
-                                            fontWeight: FontWeight.bold),
+                                            fontFamily: 'helvetica',
+                                            fontWeight: FontWeight.w700),
                                       )
                                     ],
                                   )),
@@ -691,14 +845,18 @@ class _MyHomeViewState extends State<MyHomeView> {
                                     children: [
                                       Text(
                                         "Achievement",
-                                        style: TextStyle(fontSize: 12),
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontFamily: 'helvetica',
+                                            fontWeight: FontWeight.w400),
                                       ),
                                       SizedBox(height: 5),
                                       Text(
                                         "0",
                                         style: TextStyle(
                                             fontSize: 12,
-                                            fontWeight: FontWeight.bold),
+                                            fontFamily: 'helvetica',
+                                            fontWeight: FontWeight.w700),
                                       )
                                     ],
                                   )),
@@ -707,14 +865,18 @@ class _MyHomeViewState extends State<MyHomeView> {
                                     children: [
                                       Text(
                                         "Percentage",
-                                        style: TextStyle(fontSize: 12),
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontFamily: 'helvetica',
+                                            fontWeight: FontWeight.w400),
                                       ),
                                       SizedBox(height: 5),
                                       Text(
                                         "0",
                                         style: TextStyle(
                                             fontSize: 12,
-                                            fontWeight: FontWeight.bold),
+                                            fontFamily: 'helvetica',
+                                            fontWeight: FontWeight.w700),
                                       )
                                     ],
                                   )),
@@ -747,15 +909,38 @@ class _MyHomeViewState extends State<MyHomeView> {
                                   Text(
                                     "Redemption Catalogue",
                                     style: TextStyle(
-                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'helvetica',
+                                        fontWeight: FontWeight.w700,
                                         fontSize: 14),
                                   ),
                                   SizedBox(
                                     height: 8,
                                   ),
-                                  Text(
-                                    "You have earned 0 Points in",
-                                    style: TextStyle(fontSize: 14),
+                                  RichText(
+                                    text: TextSpan(
+                                      // Note: Styles for TextSpans must be explicitly defined.
+                                      // Child text spans will inherit styles from parent
+                                      style: new TextStyle(
+                                        fontSize: 14.0,
+                                        fontFamily: 'helvetica',
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.black,
+                                      ),
+                                      children: <TextSpan>[
+                                        new TextSpan(text: "You have earned "),
+                                        new TextSpan(
+                                            text: "0",
+                                            style: new TextStyle(
+                                                fontFamily: 'helvetica',
+                                                fontWeight: FontWeight.w700)),
+                                        new TextSpan(text: " Points in "),
+                                        new TextSpan(
+                                            text: "2020",
+                                            style: new TextStyle(
+                                                fontFamily: 'helvetica',
+                                                fontWeight: FontWeight.w700)),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),
@@ -786,7 +971,8 @@ class _MyHomeViewState extends State<MyHomeView> {
                                   Text(
                                     "Warranty Catalogue",
                                     style: TextStyle(
-                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'helvetica',
+                                        fontWeight: FontWeight.w700,
                                         fontSize: 14),
                                   ),
                                   SizedBox(
@@ -796,22 +982,34 @@ class _MyHomeViewState extends State<MyHomeView> {
                                               .dashboarcountModel.value.data ==
                                           null
                                       ? RichText(
-                                          text: new TextSpan(
+                                          text: TextSpan(
                                             // Note: Styles for TextSpans must be explicitly defined.
                                             // Child text spans will inherit styles from parent
                                             style: new TextStyle(
                                               fontSize: 14.0,
+                                              fontFamily: 'helvetica',
+                                              fontWeight: FontWeight.w400,
                                               color: Colors.black,
                                             ),
                                             children: <TextSpan>[
-                                              new TextSpan(text: "You have"),
+                                              new TextSpan(
+                                                  text: "You have",
+                                                  style: new TextStyle(
+                                                      fontFamily: 'helvetica',
+                                                      fontWeight:
+                                                          FontWeight.w400)),
                                               new TextSpan(
                                                   text: "0",
                                                   style: new TextStyle(
+                                                      fontFamily: 'helvetica',
                                                       fontWeight:
-                                                          FontWeight.bold)),
+                                                          FontWeight.w700)),
                                               new TextSpan(
-                                                  text: "Warranty points."),
+                                                  text: "Warranty points.",
+                                                  style: new TextStyle(
+                                                      fontFamily: 'helvetica',
+                                                      fontWeight:
+                                                          FontWeight.w400)),
                                             ],
                                           ),
                                         )
@@ -824,7 +1022,12 @@ class _MyHomeViewState extends State<MyHomeView> {
                                               color: Colors.black,
                                             ),
                                             children: <TextSpan>[
-                                              new TextSpan(text: "You have "),
+                                              new TextSpan(
+                                                  text: "You have ",
+                                                  style: new TextStyle(
+                                                      fontFamily: 'helvetica',
+                                                      fontWeight:
+                                                          FontWeight.w400)),
                                               new TextSpan(
                                                   text: homeController
                                                           .dashboarcountModel
@@ -835,10 +1038,15 @@ class _MyHomeViewState extends State<MyHomeView> {
                                                           .toString() +
                                                       " ",
                                                   style: new TextStyle(
+                                                      fontFamily: 'helvetica',
                                                       fontWeight:
-                                                          FontWeight.bold)),
+                                                          FontWeight.w700)),
                                               new TextSpan(
-                                                  text: "Warranty points."),
+                                                  text: "Warranty points.",
+                                                  style: new TextStyle(
+                                                      fontFamily: 'helvetica',
+                                                      fontWeight:
+                                                          FontWeight.w400)),
                                             ],
                                           ),
                                         ),
@@ -871,15 +1079,42 @@ class _MyHomeViewState extends State<MyHomeView> {
                                   Text(
                                     "Merchandise Catalogue",
                                     style: TextStyle(
-                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'helvetica',
+                                        fontWeight:
+                                        FontWeight.w700,
                                         fontSize: 14),
                                   ),
                                   SizedBox(
                                     height: 8,
                                   ),
-                                  Text(
-                                    "You have earned 0 balance coins",
-                                    style: TextStyle(fontSize: 14),
+                                  RichText(
+                                    text: TextSpan(
+                                      // Note: Styles for TextSpans must be explicitly defined.
+                                      // Child text spans will inherit styles from parent
+                                      style: new TextStyle(
+                                        fontSize: 14.0,
+                                        color: Colors.black,
+                                          fontFamily: 'helvetica',
+                                          fontWeight:
+                                          FontWeight.w400
+                                      ),
+                                      children: <TextSpan>[
+                                        new TextSpan(
+                                            text: "You have earned ",
+                                            style: new TextStyle(
+                                                fontFamily: 'helvetica',
+                                                fontWeight: FontWeight.w400)),
+                                        new TextSpan(
+                                            text: "0",
+                                            style: new TextStyle(
+                                                fontWeight: FontWeight.bold)),
+                                        new TextSpan(
+                                            text: " balance coins.",
+                                            style: new TextStyle(
+                                                fontFamily: 'helvetica',
+                                                fontWeight: FontWeight.w400)),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),

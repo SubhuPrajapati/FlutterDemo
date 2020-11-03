@@ -59,12 +59,12 @@ class _NewLoginDemoAppState extends State<NewLoginDemoApp> {
         SizedBox(height: 16),
         Text(
           "Welcome",
-          style: TextStyle(fontSize: 24),
+          style: TextStyle(fontSize: 24 , fontFamily: 'helvetica' , fontWeight: FontWeight.w400),
         ),
         SizedBox(height: 8),
         Text(
           "Please sign in to your account",
-          style: TextStyle(fontSize: 16),
+          style: TextStyle(fontSize: 16 , fontFamily: 'helvetica' , fontWeight: FontWeight.w400),
         ),
         Padding(
           padding: EdgeInsets.fromLTRB(16, 16, 16, 0),
@@ -80,7 +80,7 @@ class _NewLoginDemoAppState extends State<NewLoginDemoApp> {
             margin: EdgeInsets.fromLTRB(16, 0, 0, 0),
             child: Text(
               "User Id",
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(fontSize: 16 , fontFamily: 'helvetica' , fontWeight: FontWeight.w400),
             ),
           ),
         ),
@@ -123,7 +123,7 @@ class _NewLoginDemoAppState extends State<NewLoginDemoApp> {
             margin: EdgeInsets.fromLTRB(16, 0, 0, 0),
             child: Text(
               "Password",
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(fontSize: 16 , fontFamily: 'helvetica' , fontWeight: FontWeight.w400),
             ),
           ),
         ),
@@ -171,7 +171,7 @@ class _NewLoginDemoAppState extends State<NewLoginDemoApp> {
               child: Text(
                 "Login",
                 style: TextStyle(
-                  fontWeight: FontWeight.bold,
+                fontFamily: 'helvetica' , fontWeight: FontWeight.w700
                 ),
               ),
               onPressed: () {
@@ -250,7 +250,7 @@ class _NewLoginDemoAppState extends State<NewLoginDemoApp> {
               child: Text(
                 "Recover Password",
                 style: TextStyle(
-                  fontWeight: FontWeight.bold,
+                fontFamily: 'helvetica' , fontWeight: FontWeight.w700,
                 ),
               ),
               onPressed: () {

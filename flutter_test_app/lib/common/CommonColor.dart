@@ -5,5 +5,6 @@ class CommonColor {
     50: Color.fromRGBO(73, 80, 87, 1),
     100: Color.fromRGBO(253, 187, 31, 1),
     150: Color.fromRGBO(66, 112, 237, 1),
+    200: Color.fromRGBO(248, 249, 250, 1),
   };
 }
